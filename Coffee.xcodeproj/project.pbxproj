@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		1B2B40EE27406F530013B458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B40ED27406F530013B458 /* AppDelegate.swift */; };
 		1B2B40F027406F530013B458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B40EF27406F530013B458 /* SceneDelegate.swift */; };
-		1B2B40F227406F530013B458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B40F127406F530013B458 /* ViewController.swift */; };
 		1B2B40F527406F530013B458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2B40F327406F530013B458 /* Main.storyboard */; };
 		1B2B40F727406F550013B458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2B40F627406F550013B458 /* Assets.xcassets */; };
 		1B2B40FA27406F550013B458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2B40F827406F550013B458 /* LaunchScreen.storyboard */; };
+		1B2B4103274071E70013B458 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B4102274071E70013B458 /* OrdersTableViewController.swift */; };
+		1B2B41052740720F0013B458 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B41042740720F0013B458 /* AddOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B2B40EA27406F530013B458 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2B40ED27406F530013B458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B2B40EF27406F530013B458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B2B40F127406F530013B458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B2B40F427406F530013B458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B2B40F627406F550013B458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B2B40F927406F550013B458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B2B40FB27406F550013B458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B2B4102274071E70013B458 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		1B2B41042740720F0013B458 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		1B2B40EC27406F530013B458 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				1B2B4101274070CD0013B458 /* Controller */,
 				1B2B40ED27406F530013B458 /* AppDelegate.swift */,
 				1B2B40EF27406F530013B458 /* SceneDelegate.swift */,
-				1B2B40F127406F530013B458 /* ViewController.swift */,
 				1B2B40F327406F530013B458 /* Main.storyboard */,
 				1B2B40F627406F550013B458 /* Assets.xcassets */,
 				1B2B40F827406F550013B458 /* LaunchScreen.storyboard */,
 				1B2B40FB27406F550013B458 /* Info.plist */,
 			);
 			path = Coffee;
+			sourceTree = "<group>";
+		};
+		1B2B4101274070CD0013B458 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B2B4102274071E70013B458 /* OrdersTableViewController.swift */,
+				1B2B41042740720F0013B458 /* AddOrderViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B2B40F227406F530013B458 /* ViewController.swift in Sources */,
 				1B2B40EE27406F530013B458 /* AppDelegate.swift in Sources */,
 				1B2B40F027406F530013B458 /* SceneDelegate.swift in Sources */,
+				1B2B4103274071E70013B458 /* OrdersTableViewController.swift in Sources */,
+				1B2B41052740720F0013B458 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
