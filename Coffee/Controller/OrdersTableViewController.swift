@@ -8,7 +8,8 @@
 import UIKit
 
 class OrdersTableViewController: UITableViewController {
-
+    var newOrderListViewModel = NewOrderListViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateOrders()
@@ -24,10 +25,12 @@ class OrdersTableViewController: UITableViewController {
         print("this was the Islandurl: \(islandURL)")
 
         let resource = Resource<[NewOrder]>(url:islandURL)
-        Webservice().load(resource: resource) { result in
+        Webservice().load(resource: resource) { [weak self ] result in
             switch result {
             case .success(let orders):
                 print("these are the orders: \(orders)")
+                self?.newOrderListViewModel.newOrdersViewModel = orders.map (NewOrderViewModel.init)
+                self?.tableView.reloadData()
             case .failure(let error):
                 print("Error with the webservice: \(error.localizedDescription)")
             }
@@ -38,24 +41,27 @@ class OrdersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return newOrderListViewModel.newOrdersViewModel.count
     }
 
-    /*
+  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewOrderCell", for: indexPath)
+        let newOrder = self.newOrderListViewModel.newOrderViewModel(at: indexPath.row)
+        
+        cell.textLabel?.text = newOrder.coffeeName
+        cell.detailTextLabel?.text = newOrder.size
+        
         // Configure the cell...
 
         return cell
     }
-    */
-
+   
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -41,6 +41,6 @@ extension NewOrderViewModel {
     }
     
     var size: String {
-        newOrder.size.rawValue.capitalized
+        newOrder.size.rawValue
     }
 }

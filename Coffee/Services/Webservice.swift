@@ -23,16 +23,20 @@ class Webservice {
                 completion(.failure(.domainError))
                 return
             }
-            let result = try? JSONDecoder().decode(T.self, from: data)
-            if let result = result {
-                //passing data to ui so it has to be done on the main thread
-                DispatchQueue.main.async {
-                    completion(.success(result))
-                }
-            } else {
-                print("the response: \(response)")
-                completion(.failure(.decodingError))
+            print("data: \(data)")
+            let result = try! JSONDecoder().decode(T.self, from: data)
+            DispatchQueue.main.async {
+                completion(.success(result))
             }
+            //            if let result = result {
+            //                //passing data to ui so it has to be done on the main thread
+            //                DispatchQueue.main.async {
+            //                    completion(.success(result))
+            //                }
+            //            } else {
+            //                print("the response: \(response)")
+            //                completion(.failure(.decodingError))
+            //            }
         }.resume()
         
     }
