@@ -18,11 +18,11 @@ import Foundation
  size: String
  */
 
-struct AddCoffeeOrderViewModel: Codable {
+struct AddCoffeeOrderViewModel {
     var name: String?
-    var coffeeName: String
-    var total: Double
-    var size: [String] {
+    var coffeeName: String?
+    var total: Double?
+    var sizes: [String] {
         return CoffeeSize.allCases.map { $0.rawValue }
     }
 }
