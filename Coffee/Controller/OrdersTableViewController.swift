@@ -11,9 +11,29 @@ class OrdersTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateOrders()
+    }
+    private func populateOrders() {
+//        guard let coffeeOrdersURL = URL(string: "https://guarded-retreat-82533.herokuapp.com/orders") else {
+//            fatalError("URL was incorrect")
+//        }
+//        print("this was the url: \(coffeeOrdersURL)")
+        guard let islandURL = URL(string: "https://island-bramble.glitch.me/orders") else {
+            fatalError("IslandURL was incorrect sucka")
+        }
+        print("this was the Islandurl: \(islandURL)")
+
+        let resource = Resource<[NewOrder]>(url:islandURL)
+        Webservice().load(resource: resource) { result in
+            switch result {
+            case .success(let orders):
+                print("these are the orders: \(orders)")
+            case .failure(let error):
+                print("Error with the webservice: \(error.localizedDescription)")
+            }
+        }
         
     }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

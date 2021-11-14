@@ -30,6 +30,7 @@ class Webservice {
                     completion(.success(result))
                 }
             } else {
+                print("the response: \(response)")
                 completion(.failure(.decodingError))
             }
         }.resume()
