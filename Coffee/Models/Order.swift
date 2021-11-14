@@ -29,9 +29,9 @@ enum CoffeeType: String, Codable {
 }
 
 enum CoffeSize: String, Codable {
-    case Small
+    case small
     case Medium
-    case Large
+    case large
 }
 
 class Order: Codable {
