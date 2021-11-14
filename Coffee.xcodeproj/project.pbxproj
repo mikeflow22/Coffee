@@ -17,6 +17,7 @@
 		1B2B4108274099540013B458 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B4107274099540013B458 /* Webservice.swift */; };
 		1B2B410B27409BAC0013B458 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B410A27409BAC0013B458 /* Order.swift */; };
 		1B2B410E2740A6E30013B458 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B410D2740A6E30013B458 /* OrderViewModel.swift */; };
+		1B2B411027415D700013B458 /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B410F27415D700013B458 /* AddCoffeeOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1B2B4107274099540013B458 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		1B2B410A27409BAC0013B458 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1B2B410D2740A6E30013B458 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		1B2B410F27415D700013B458 /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCoffeeOrderViewModel.swift; path = "Coffee/View Models/AddCoffeeOrderViewModel.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1B2B410D2740A6E30013B458 /* OrderViewModel.swift */,
+				1B2B410F27415D700013B458 /* AddCoffeeOrderViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2B410B27409BAC0013B458 /* Order.swift in Sources */,
+				1B2B411027415D700013B458 /* AddCoffeeOrderViewModel.swift in Sources */,
 				1B2B40EE27406F530013B458 /* AppDelegate.swift in Sources */,
 				1B2B40F027406F530013B458 /* SceneDelegate.swift in Sources */,
 				1B2B4103274071E70013B458 /* OrdersTableViewController.swift in Sources */,

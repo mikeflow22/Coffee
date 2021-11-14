@@ -28,7 +28,7 @@ enum CoffeeType: String, Codable {
     case cortado
 }
 
-enum CoffeSize: String, Codable {
+enum CoffeeSize: String, Codable, CaseIterable {
     case small
     case Medium
     case large
@@ -38,12 +38,12 @@ class Order: Codable {
     let name: String
     let email: String
     let type: CoffeeType
-    let size: CoffeSize
+    let size: CoffeeSize
 }
 
 struct NewOrder: Codable {
     let name: String
     let coffeeName: String
     let total: Double
-    let size: CoffeSize
+    let size: CoffeeSize
 }
