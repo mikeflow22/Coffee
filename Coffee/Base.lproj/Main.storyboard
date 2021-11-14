@@ -81,16 +81,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fap-ek-Kno">
-                                <rect key="frame" x="104" y="524" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iE8-Ql-vh9">
-                                <rect key="frame" x="107" y="587" width="200" height="34"/>
+                                <rect key="frame" x="107" y="621" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="uhp-IZ-m2Q"/>
                                 </constraints>
@@ -98,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-W7-T18">
-                                <rect key="frame" x="107" y="629" width="200" height="34"/>
+                                <rect key="frame" x="107" y="663" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="LNR-g3-Ll3"/>
                                 </constraints>
@@ -109,14 +101,12 @@
                         <viewLayoutGuide key="safeArea" id="XlR-Y1-oBp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fap-ek-Kno" firstAttribute="top" secondItem="5op-iG-e8Z" secondAttribute="bottom" constant="47" id="2yu-nE-JSG"/>
                             <constraint firstItem="xBR-W7-T18" firstAttribute="top" secondItem="iE8-Ql-vh9" secondAttribute="bottom" constant="8" symbolic="YES" id="3cr-2B-82I"/>
                             <constraint firstItem="5op-iG-e8Z" firstAttribute="leading" secondItem="XlR-Y1-oBp" secondAttribute="leading" id="5eD-0Q-MqF"/>
                             <constraint firstItem="5op-iG-e8Z" firstAttribute="top" secondItem="XlR-Y1-oBp" secondAttribute="top" id="6NS-YS-XAp"/>
-                            <constraint firstItem="fap-ek-Kno" firstAttribute="centerX" secondItem="oGx-QV-RMm" secondAttribute="centerX" id="7Na-fl-hGD"/>
                             <constraint firstItem="iE8-Ql-vh9" firstAttribute="centerX" secondItem="oGx-QV-RMm" secondAttribute="centerX" id="Ekm-52-kb0"/>
-                            <constraint firstItem="iE8-Ql-vh9" firstAttribute="top" secondItem="fap-ek-Kno" secondAttribute="bottom" constant="32" id="WEg-7N-7hw"/>
                             <constraint firstItem="5op-iG-e8Z" firstAttribute="height" secondItem="oGx-QV-RMm" secondAttribute="height" multiplier="0.5" id="bdz-GX-4wh"/>
+                            <constraint firstItem="XlR-Y1-oBp" firstAttribute="bottom" secondItem="xBR-W7-T18" secondAttribute="bottom" constant="145" id="fLy-0L-TTI"/>
                             <constraint firstItem="xBR-W7-T18" firstAttribute="centerX" secondItem="oGx-QV-RMm" secondAttribute="centerX" id="mo9-cQ-Aq4"/>
                             <constraint firstItem="5op-iG-e8Z" firstAttribute="width" secondItem="oGx-QV-RMm" secondAttribute="width" id="pRz-Dm-Eac"/>
                         </constraints>

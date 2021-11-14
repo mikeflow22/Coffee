@@ -18,6 +18,7 @@ import Foundation
  size: String
  */
 
+//will use this to populate the AddOrder view controller
 struct AddCoffeeOrderViewModel {
     var name: String?
     var coffeeName: String?
