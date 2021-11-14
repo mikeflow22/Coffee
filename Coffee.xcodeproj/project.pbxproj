@@ -14,6 +14,7 @@
 		1B2B40FA27406F550013B458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2B40F827406F550013B458 /* LaunchScreen.storyboard */; };
 		1B2B4103274071E70013B458 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B4102274071E70013B458 /* OrdersTableViewController.swift */; };
 		1B2B41052740720F0013B458 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B41042740720F0013B458 /* AddOrderViewController.swift */; };
+		1B2B4108274099540013B458 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2B4107274099540013B458 /* Webservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B2B40FB27406F550013B458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B2B4102274071E70013B458 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
 		1B2B41042740720F0013B458 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
+		1B2B4107274099540013B458 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		1B2B40EC27406F530013B458 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				1B2B41062740992B0013B458 /* Services */,
 				1B2B4101274070CD0013B458 /* Controller */,
 				1B2B40ED27406F530013B458 /* AppDelegate.swift */,
 				1B2B40EF27406F530013B458 /* SceneDelegate.swift */,
@@ -76,6 +79,14 @@
 				1B2B41042740720F0013B458 /* AddOrderViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B2B41062740992B0013B458 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B2B4107274099540013B458 /* Webservice.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				1B2B40EE27406F530013B458 /* AppDelegate.swift in Sources */,
 				1B2B40F027406F530013B458 /* SceneDelegate.swift in Sources */,
 				1B2B4103274071E70013B458 /* OrdersTableViewController.swift in Sources */,
+				1B2B4108274099540013B458 /* Webservice.swift in Sources */,
 				1B2B41052740720F0013B458 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
