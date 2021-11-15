@@ -8,10 +8,13 @@
 import UIKit
 
 class AddOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     private var viewModel = AddCoffeeOrderViewModel()
     private var coffeeSizesSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,21 @@ class AddOrderViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        let email = self.emailTextField.text
+        let name = self.nameTextField.text
+        
+        let selectedSize = self.coffeeSizesSegmentedControl.titleForSegment(at: self.coffeeSizesSegmentedControl.selectedSegmentIndex)
+        
+        guard let indexPath = self.tableView.indexPathForSelectedRow else {
+            fatalError("Error in selecting coffee!")
+        }
+        
+        self.viewModel.name = name
+        self.viewModel.coffeeName = email
+        self.viewModel.selectedSize = selectedSize
+//        self.viewModel.selectedType = self.viewModel.
+    }
     private func setupUI() {
         self.coffeeSizesSegmentedControl = UISegmentedControl(items: self.viewModel.sizes)
         self.coffeeSizesSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +64,6 @@ class AddOrderViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType = .none 
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
 }

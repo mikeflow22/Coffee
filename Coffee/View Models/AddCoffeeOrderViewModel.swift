@@ -22,6 +22,8 @@ import Foundation
 struct AddCoffeeOrderViewModel {
     var name: String?
     var coffeeName: String?
+    var selectedType: String?
+    var selectedSize: String?
     var total: Double?
     var sizes: [String] {
         return CoffeeSize.allCases.map { $0.rawValue }
